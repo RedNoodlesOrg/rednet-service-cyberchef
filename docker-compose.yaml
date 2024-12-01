@@ -1,6 +1,11 @@
-name: "PLACEHOLDER"
+name: "cyberchef"
 services:
-
+    cyberchef:
+        image: ghcr.io/gchq/cyberchef:latest
+        restart: unless-stopped
+        hostname: cyberchef
+        networks:
+          cloudflared-network: null
 networks:
   cloudflared-network:
     name: cloudflared-network
